@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlamBook</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+  <header>
+    <h1>Glam Book</h1>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h2>Luxury Beauty & Wellness</h2>
+    <p>Pamper yourself with our premium beauty services.</p>
+    <a href="#booking" class="btn">Book an Appointment</a>
+  </section>
+  <div class="w3-content" style="max-width:600px">
+    <img class="mySlides" src="img_1.jpg" style="width:100%;display:none">
+    <img class="mySlides" src="img_2.jpg" style="width:100%">
+    <img class="mySlides" src="img_3.jpg" style="width:100%;display:none">
+  
+    <div class="w3-row-padding w3-section">
+      <div class="w3-col s4">
+        <img class="demo w3-opacity w3-hover-opacity-off" src="img_1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+      </div>
+      <div class="w3-col s4">
+        <img class="demo w3-opacity w3-hover-opacity-off" src="img_2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+      </div>
+      <div class="w3-col s4">
+        <img class="demo w3-opacity w3-hover-opacity-off" src="img_3.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service">
+        <h3>Hair Styling</h3>
+        <p>Professional haircuts, coloring, and styling.</p>
+        <p>Starting at ₱1,500</p>
+      </div>
+      <div class="service">
+        <h3>Nail Treatments</h3>
+        <p>Manicures, pedicures, and nail art.</p>
+        <p>Starting at ₱300</p>
+      </div>
+      <div class="service">
+        <h3>Facial Treatments</h3>
+        <p>Relaxing facials tailored to your skin type.</p>
+        <p>Starting at ₱3,000</p>
+      </div>
+      <div class="service">
+        <h3>Massage Therapy</h3>
+        <p>Full-body relaxation and deep tissue massages.</p>
+        <p>Starting at ₱800</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Appointment</h2>
+    <form id="bookingForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="service">Service:</label>
+      <select id="service" name="service" required>
+        <option value="hair">Hair Styling</option>
+        <option value="nails">Nail Treatments</option>
+        <option value="facial">Facial Treatments</option>
+        <option value="massage">Massage Therapy</option>
+      </select>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+    <p id="confirmation"></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: glambook@gmail.com</p>
+    <p>Phone: 09123456789</p>
+    <p>Address: 456 Beauty Ave, Batangas City</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Glam Book. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-opacity-off";
+  }
+</script>
+</body>
+</html>

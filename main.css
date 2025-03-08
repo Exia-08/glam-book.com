@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ff80bb;
+    color: #de227a;
+  }
+  
+  header {
+    background-color: #da8db1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #hero {
+    text-align: center;
+    padding: 50px;
+    background-image: url('salon-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8e24aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #6a1b9a;
+  }
+  
+  #services {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+  
+  #booking {
+    text-align: center;
+    padding: 40px;
+    background: #f3e5f5;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input, form select, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #8e24aa;
+    color: white;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #6a1b9a;
+  }
+  
+  #contact {
+    text-align: center;
+    padding: 40px;
+    background: #6a1b9a;
+    color: white;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #4a148c;
+    color: white;
+  }
+  
